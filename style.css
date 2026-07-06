@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.5em;
+}
+
+.score {
+    flex: 1;
+}
+
+.score p:first-child {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.score-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.game-board {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: #000;
+    border: 3px solid #fff;
+    margin: 0 auto 30px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.paddle {
+    position: absolute;
+    width: 15px;
+    height: 80px;
+    background: linear-gradient(90deg, #00ff00, #00dd00);
+    border: 2px solid #00ff00;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.left-paddle {
+    left: 10px;
+}
+
+.right-paddle {
+    right: 10px;
+}
+
+.ball {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 30% 30%, #ffff00, #ff8800);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #ffff00;
+}
+
+.center-line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 2px dashed #fff;
+    opacity: 0.3;
+}
+
+.controls {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.controls p {
+    margin: 5px 0;
+}
+
+@media (max-width: 850px) {
+    .game-board,
+    .scoreboard,
+    .controls {
+        width: 90vw;
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .scoreboard {
+        font-size: 1.2em;
+    }
+
+    .score-value {
+        font-size: 2em;
+    }
+}
